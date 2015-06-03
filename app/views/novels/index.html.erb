@@ -1,16 +1,29 @@
 <h1> Novels </h1>
 <% if current_user %>
- <h2>You are logged in as: <%= current_user.name %> <%= link_to 'Log Out', logout_path, method: :delete %></h2>
+ 	<h2>You are logged in as: <%= current_user.name %> <%= link_to 'Log Out', logout_path, method: :delete %></h2>
 <% else %>
   <%= link_to 'Log In', login_path %>
   <%= link_to 'Sign Up', users_new_path %>
+ 
 <% end %>
+
+
 <h2>Drama</h2>
 <!-- this is where i list the genres for novels -->
-<ul>
+<!-- <ul>
 	<li>"A Tale of Two Cities"</li>
 	<li>"Romeo and Juliet"</li>
 	<li>"Dangerous Liaisons"</li>
 	<li>"The Giver"</li>
 	<li>"The Great Gatsby"</li>
+</ul> -->
+<ul>
+	<% @novels.each do |n| %>
+	 	<li>
+	 		<strong> <%= n.name %> </strong> 
+	 	</li>
+	<% end %>
 </ul>
+	
+
+

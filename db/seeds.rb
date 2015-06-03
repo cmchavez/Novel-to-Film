@@ -8,4 +8,6 @@
 
 novels = Novel.create([
 	{ name: "The Shining", author: "Stephen King", year_published: 1974, genre: "Horror" }, 
-	{ name: "A Tale of Two Cities", author: "Charles Dickens", year_published: 1859, genre: "Drama" }])
+	{ name: "A Tale of Two Cities", author: "Charles Dickens", year_published: 1859, genre: "Drama" },
+	{ name: "The Great Gatsby", author: "F. Scott Fitzgerald", year_published: 1925, genre: "Drama"}
+	])
