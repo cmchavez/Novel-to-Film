@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+novels = Novel.create([
+	{ name: "The Shining", author: "Stephen King", year_published: 1974, genre: "Horror" }, 
+	{ name: "A Tale of Two Cities", author: "Charles Dickens", year_published: 1859, genre: "Drama" }])

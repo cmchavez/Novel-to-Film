@@ -1,6 +1,13 @@
+<%#= current_user.name %>
+
 <h1>Users</h1>
 <ul>
-  <% @users.each do |user| %>
+	
+  	<% @users.each do |user| %>
     <li><%= user.name %></li>
+
   <% end %>
 </ul>
+
+
+<%= link_to 'Log Out', logout_path, method: :delete %>
