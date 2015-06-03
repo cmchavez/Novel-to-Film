@@ -1,13 +1,15 @@
 <%#= current_user.name %>
 
-<h1>Users</h1>
-<ul>
-	
-  	<% @users.each do |user| %>
-    <li><%= user.name %></li>
+<h1>Pick a Genre:</h1>
 
-  <% end %>
+	<% @genres.each do |g| %>
+	 	<li>
+	 		<strong> <%= g.name %> </strong> 
+	 	</li>
+	<% end %>
 </ul>
-
+<br>
+<br>
+<br>
 
 <%= link_to 'Log Out', logout_path, method: :delete %>

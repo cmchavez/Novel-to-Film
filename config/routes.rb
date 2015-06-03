@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get 'novels' => 'novels#index'
   get 'novels/:id' => 'novels#show', as: :novel
+
+
   get 'films' => 'films#index'
 
 
