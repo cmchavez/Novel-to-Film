@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'genres/show'
+  # resources :genres
+
+
 
   root 'welcome#index'
   
@@ -19,7 +21,12 @@ Rails.application.routes.draw do
   get 'novels/:id' => 'novels#show', as: :novel
 
 
+  get 'genres' => 'genres#index', as: :genres
+  get 'genres/:id' => 'genres#show', as: :genre
+
   get 'films' => 'films#index'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

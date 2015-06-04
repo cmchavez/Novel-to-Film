@@ -1,2 +1,6 @@
-<h1>Genres#show</h1>
-<p>Find me in app/views/genres/show.html.erb</p>
+<h1>Novels Under that Genre:</h1>
+
+<%#= @genre.inspect %>
+<% @genre.novels.each do |novel| %>
+<%= novel.title %>
+	<% end %> 

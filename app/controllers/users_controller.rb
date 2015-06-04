@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 		if @user.save
 			
 			session[:user_id] = @user.id.to_s
-			redirect_to users_path
+			redirect_to genres_path
 		else
 			render :new
 		end 

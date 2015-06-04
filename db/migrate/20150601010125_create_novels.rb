@@ -5,7 +5,7 @@ class CreateNovels < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.integer :year_published
-      t.string :genre
+  
 
       t.timestamps null: false
     end

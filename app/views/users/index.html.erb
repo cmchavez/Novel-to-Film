@@ -1,15 +1,1 @@
-<%#= current_user.name %>
-
-<h1>Pick a Genre:</h1>
-
-	<% @genres.each do |g| %>
-	 	<li>
-	 		<strong> <%= g.name %> </strong> 
-	 	</li>
-	<% end %>
-</ul>
-<br>
-<br>
-<br>
-
-<%= link_to 'Log Out', logout_path, method: :delete %>
+<%= link_to "Select Genre", genres_path %>
