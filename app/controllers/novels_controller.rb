@@ -1,8 +1,8 @@
 class NovelsController < ApplicationController
 
 	def index
+	
 		@novels = Novel.all
-
 		
 		# @novel = Novel.find(params[:id])
 	end
@@ -11,3 +11,5 @@ class NovelsController < ApplicationController
 		@novel = Novel.find(params[:id])
 	end 
 end
+
+

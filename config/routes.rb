@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
  
-  # resources :genres
+ # resources :genres do
+ #  resources :novels
+ # end
 
 
 
@@ -18,12 +20,15 @@ Rails.application.routes.draw do
 
 
 
-  get 'novels' => 'novels#index'
-  get 'novels/:id' => 'novels#show', as: :novel
+  get '/genres' => 'genres#index', as: :genres
+  get '/genres/:id(.:format)' => 'genres#show', as: :genre 
 
 
-  get 'genres' => 'genres#index', as: :genres
-  get 'genres/:id' => 'genres#show', as: :genre
+  get '/genres/:genre_id/novels(.:format)' => 'novels#index'
+  get '/genres/:genre_id/novels/:id(.:format)' => 'novels#show', as: :novel
+
+
+  
 
   get 'films' => 'films#index'
 

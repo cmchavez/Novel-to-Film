@@ -3,7 +3,7 @@
 <%#= @genre.inspect %>
 <% @genre.novels.each do |novel| %>
 <ul>
-<strong><%= link_to novel.title, novels_path %></strong>
+<strong><%= link_to novel.title, genre_novel_path(params[:id][:genre_id]) %></strong>
 </ul>
 	<% end %> 
 
