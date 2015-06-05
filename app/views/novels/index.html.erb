@@ -1,19 +1,20 @@
-<h1> Novels </h1>
-<% if current_user %>
- 	<h3>You are logged in as: <%= current_user.name %></h3>
-<% end %>
+<h1> Novel Info </h1>
 
-<h2>Drama</h2>
 <div>
 	<ul>
-		<% @novels.each do |n| %>
+		<% @novels.each do |novela| %>
 		 	<li>
-		 		<strong> <%= n.title %> </strong> 
+		 		<strong> <%= novela.title %> </strong> 
 		 	</li>
 		<% end %>
 
 	</ul>
 </div>
-	
-<br><h4><%= link_to 'Log Out', logout_path, method: :delete %> <%= link_to 'Back', users_path %></h4>
+<br>
+<br>
+<br>
+	<% if current_user %>
+ 	<h3>You are logged in as: <%= current_user.name %></h3>
+<% end %>
+<h4><%= link_to 'Log Out', logout_path, method: :delete %> <%= link_to 'Back', genres_path %></h4>
 
