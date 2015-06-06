@@ -3,7 +3,10 @@ Rails.application.routes.draw do
  
  # resources :genres do
  #  resources :novels
- # end
+#  # end
+#  resources :novels do 
+#   resources :films
+# end
 
 
 
@@ -19,7 +22,6 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
 
-
   get '/genres' => 'genres#index', as: :genres
   get '/genres/:id(.:format)' => 'genres#show', as: :genre 
 
@@ -31,6 +33,7 @@ Rails.application.routes.draw do
   
 
   get 'films' => 'films#index'
+
 
 
 
