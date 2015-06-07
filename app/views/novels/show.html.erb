@@ -1,14 +1,14 @@
 <h1>Novel Information</h1>
  
     
-   
-      <h3><%= @novel.title %></h3>
-      <p><%= @novel.author %></p>
-      <p><%= @novel.year_published %></p>
+     
+      <h3><<%= @novel.title %></h3>
+      <p><strong> Author: </strong><%= @novel.author %></p>
+      <p><strong> Year Published: </strong><%= @novel.year_published %></p>
 
 
 
-<strong><%= link_to "See Film Adaptation", novel_film_path(novel, film)%></strong> 
+<%#= link_to 'Film Adaptation', novel_film_path %>
 
 <h4>You are logged in as: <%= current_user.name.upcase if current_user%></h4>
 <br>

@@ -1,3 +1,13 @@
 <h1> Films </h1>
 
+	 <h3><%= @film.title %></h3>
+     <p><strong> Director: </strong><%= @film.director %></p>
+     <p><strong> Release Year: </strong><%= @film.release_year %></p>
+     <p><strong> Stars: </strong><%= @film.stars %></p>
+
+
 <h4>You are logged in as: <%= current_user.name.upcase if current_user%></h4>
+<br>
+<br>
+<%= link_to 'Back', genres_path %>
+<%= link_to 'Log Out', logout_path, method: :delete %>

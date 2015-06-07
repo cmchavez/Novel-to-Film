@@ -2,11 +2,19 @@
 
 <% @genre.novels.each do |novel| %>
 
-<ul>
-	<strong><%= link_to novel.title, novel_path(@genre, novel)%></strong>
-</ul>
+	
+		<p><strong><%= link_to novel.title, novel_path(@genre, novel)%></strong></p>
+		
+<% end %>
 
-<% end %> 
+<h2>Film Adaptations: </h2>
+		<% @genre.films.each do |film| %>
+	
+		<p><strong><%= link_to film.title, film_path(@genre, film)%></strong></p>
+		 
+
+
+<% end %>
 
 <h4>You are logged in as: <%= current_user.name.upcase if current_user%></h4>
 

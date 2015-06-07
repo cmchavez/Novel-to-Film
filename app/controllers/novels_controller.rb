@@ -11,6 +11,10 @@ class NovelsController < ApplicationController
 		@novel = Novel.find(params[:id])
 		
 	end 
+
+	def create
+		
+	end 
 end
 
 

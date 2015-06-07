@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   
 
   get 'films' => 'films#index'
-  get '/novels/:novel_id/films/:id(.:format)' => 'films#show'
+  get '/novels/:novel_id/films/:id(.:format)' => 'films#show', as: :film
 
 
 
