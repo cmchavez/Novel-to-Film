@@ -28,7 +28,16 @@ class UsersController < ApplicationController
 		@user = User.find(current_user)
 	end
 
-	
+	def update
+		@user = User.find(current_user)
+		if @user.update_attributes(user_params)
+		
+			redirect_to genres_path
+		else
+			render 'edit'
+		end
+	end
+
 
 	private
 

@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   get '/users/new' => 'users#new'
   post '/users' => 'users#create'
   get '/users/edit' => 'users#edit'
+  patch '/users/:id' => 'users#update'
+
+
+
 
 
   get '/genres' => 'genres#index', as: :genres
