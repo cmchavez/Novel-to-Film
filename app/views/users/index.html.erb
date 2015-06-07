@@ -1,4 +1,11 @@
-<strong><%= link_to "Let's Start with a Genre", genres_path %></strong>
+<h1><strong><%= link_to "Let's Start with a Genre", genres_path %></strong></h1>
 <br>
 <strong><%= link_to "Edit My Profile", users_edit_path %></strong>
+<br>
+<strong><%= link_to 'Log Out', logout_path, method: :delete %></strong>
+<br>
+<strong><%= link_to "Delete My Profile", @user, method: :delete, 
+											data: { confirm: "Are you sure?" } %>
+
+
 

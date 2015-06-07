@@ -13,16 +13,18 @@ Rails.application.routes.draw do
   root 'welcome#index'
   
   # resources :novels
-  get '/login'     => 'sessions#new'
-  post '/login'    => 'sessions#create' 
-  delete '/logout' => 'sessions#destroy'
+  
 
   get '/users' => 'users#index'
   get '/users/new' => 'users#new'
   post '/users' => 'users#create'
   get '/users/edit' => 'users#edit'
   patch '/users/:id' => 'users#update'
+  delete '/users/:id' => 'users#destroy'
 
+  get '/login'     => 'sessions#new'
+  post '/login'    => 'sessions#create' 
+  delete '/logout' => 'sessions#destroy'
 
 
 

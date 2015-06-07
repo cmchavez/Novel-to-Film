@@ -1,10 +1,10 @@
 <h1>Pick One:</h1>
 
 	<% @genres.each do |genre| %>
-	 	<li>
-	 		<strong> <%= link_to genre.name, genre_path(genre.id) %> </strong> 
+	 	
+	 		<p><strong> <%= link_to genre.name, genre_path(genre.id) %> </strong></p>
 	 		
-	 	</li>
+	 	
 	<% end %>
 </ul>
 <br>

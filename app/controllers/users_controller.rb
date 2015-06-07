@@ -38,6 +38,14 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def destroy
+		@user = User.find(params[:id]).destroy
+		if @user.destroy
+			redirect_to login_path
+		else 
+			render_error_message
+		end
+	end
 
 	private
 
