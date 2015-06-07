@@ -5,6 +5,10 @@ class UsersController < ApplicationController
 		@genres = Genre.all
 	end
 
+	def show
+		@user = User.find(params[:id])
+	end 
+
 	def new
 		@user = User.new
 	end
@@ -19,6 +23,10 @@ class UsersController < ApplicationController
 			render :new
 		end 
 	end 
+
+	def edit
+		@user = User.find(current_user)
+	end
 
 	
 
