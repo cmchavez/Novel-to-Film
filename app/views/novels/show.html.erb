@@ -1,14 +1,14 @@
 <h1>Novel Information</h1>
-  <% @novel.attributes.each do |title, author, year_published| %>
+ 
     
    
       <h3><%= @novel.title %></h3>
       <p><%= @novel.author %></p>
       <p><%= @novel.year_published %></p>
 
-<% end %>
 
-<%= link_to "See Film Adaptation", novel_film_path(@film) 
+
+<strong><%= link_to "See Film Adaptation", novel_film_path(novel, film)%></strong> 
 
 <h4>You are logged in as: <%= current_user.name.upcase if current_user%></h4>
 <br>

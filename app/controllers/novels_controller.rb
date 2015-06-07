@@ -9,6 +9,7 @@ class NovelsController < ApplicationController
 
 	def show
 		@novel = Novel.find(params[:id])
+		
 	end 
 end
 
