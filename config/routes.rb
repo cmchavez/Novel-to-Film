@@ -37,17 +37,17 @@ Rails.application.routes.draw do
 
   get '/genres/:genre_id/novels' => 'novels#index', as: :novels
   get '/genres/:genre_id/novels/new' => 'novels#new', as: :new_novel
-  get '/genres/:genre_id/novels/:id(.:format)' => 'novels#show', as: :novel
+  get '/genres/:genre_id/novels/:id' => 'novels#show', as: :novel
+  delete 'genres/:genre_id/novels/:id' => 'novels#destroy', as: :delete_novel
   post 'genres/:genre_id/novels' => 'novels#create'
   get 'novels/:id/edit' => 'novels#edit', as: :edit_novel
   patch 'novels/:id' => 'novels#update'
-  delete 'genres/:id/novels/:id' => 'novels#destroy', as: :delete_novel
-
+  
 
   
 
   get 'films' => 'films#index'
-  get '/novels/:novel_id/films/:id(.:format)' => 'films#show', as: :film
+  get '/novels/:novel_id/films/:id' => 'films#show', as: :film
 
 
 

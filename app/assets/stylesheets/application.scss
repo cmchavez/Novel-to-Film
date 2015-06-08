@@ -1,0 +1,14 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+BODY {
+	margin: 0;
+	background: url("bookshelf_background.jpeg");
+	
+}
+.btn {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 50px;
+   font-color: white;
+}

@@ -48,8 +48,7 @@ class NovelsController < ApplicationController
 		redirect_to genres_path
 	end
 
-
-	private 
+private 
 	def novel_params
 		params.require(:novel).permit(:title, :author, :year_published)
 	end
