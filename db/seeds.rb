@@ -51,8 +51,7 @@ novels = Novel.create([
 	{ title: "Shutter Island", author: "Dennis Lehane", year_published: 2003, genre_id: 7 },
 	{ title: "Misery", author: "Stephen King", year_published: 1987, genre_id: 7 },
 	{ title: "The Silence of the Lambs", author: "Thomas Harris", year_published: 1988, genre_id: 7 },
-	{ title: "The Beach", author: "Alex Garland", year_published: 1996, genre_id: 7 }
-# 	])
+	{ title: "The Beach", author: "Alex Garland", year_published: 1996, genre_id: 7 }])
 
 films = Film.create([
 	{ title: "The Bourne Identity", director: "Doug Liman", release_year: 2002, stars: "Matt Damon, Franka Potente", genre_id: 1 },
