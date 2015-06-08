@@ -1,0 +1,26 @@
+<h1>Add a new Novel!</h1>
+
+<%= form_for @novel do |f| %>
+
+    <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+
+    <div>
+        <%= f.label :author %>
+        <%= f.text_field :author %>
+    </div>
+
+    <div>
+        <%= f.label :year_published %>
+        <%= f.text_field :year_published %>
+    </div>
+
+
+    
+    <%= f.submit "Add new Novel!" %>
+
+<% end %>
+
+<%#= link_to "Back to the novels list!", genre_path(genre.id) %>

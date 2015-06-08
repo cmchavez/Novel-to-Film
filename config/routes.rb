@@ -37,11 +37,13 @@ Rails.application.routes.draw do
 
 
   get '/genres' => 'genres#index', as: :genres
-  get '/genres/:id(.:format)' => 'genres#show', as: :genre 
+  get '/genres/:id' => 'genres#show', as: :genre 
 
 
-  get '/genres/:genre_id/novels(.:format)' => 'novels#index'
+  get '/genres/:genre_id/novels' => 'novels#index'
   get '/genres/:genre_id/novels/:id(.:format)' => 'novels#show', as: :novel
+  get '/novels/new' => 'novels#new', as: :new_novel
+  post '/novels' => 'novels#create'
 
 
   
