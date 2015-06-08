@@ -1,6 +1,7 @@
 <h1> Edit Your Profile </h1>
+<h4>You are logged in as: <%= current_user.name.upcase if current_user%></h4>
 
-<%= form_for @user, url: users_edit_path do |f| %>
+<%= form_for @user, url: edit_user_path do |f| %>
 
 	<%= f.label :name %>
     <%= f.text_field :name %><br>

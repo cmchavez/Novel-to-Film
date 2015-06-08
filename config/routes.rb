@@ -15,17 +15,24 @@ Rails.application.routes.draw do
   # resources :novels
   
 
-  get '/users' => 'users#index'
-  get '/users/new' => 'users#new'
+  get 'users' => 'users#index', as: :users
+  
+  
   post '/users' => 'users#create'
-  get '/users/edit' => 'users#edit'
+  
+  get '/users/new' => 'users#new', as: :new_user
+ 
+  get '/users/:id/edit' => 'users#edit', as: :edit_user
+
+  get '/users/:id' => 'users#show', as: :user
+
   patch '/users/:id' => 'users#update'
-  delete '/users/:id' => 'users#destroy'
+
+  delete 'users/:id' => 'users#destroy', as: :delete_user
 
   get '/login'     => 'sessions#new'
   post '/login'    => 'sessions#create' 
   delete '/logout' => 'sessions#destroy'
-
 
 
 
