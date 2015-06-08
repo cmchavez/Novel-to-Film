@@ -1,4 +1,5 @@
-<h1><strong><%= link_to "Let's Start with a Genre", genres_path %></strong></h1>
+<h1><strong><%= link_to "Welcome", genres_path %></strong></h1>
+<h4>You are logged in as: <%= current_user.name.upcase if current_user%></h4>
 <%= link_to 'Log Out', logout_path, method: :delete %>
 
 <br>
