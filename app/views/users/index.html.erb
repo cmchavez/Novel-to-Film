@@ -1,19 +1,24 @@
 <h1><strong><%= link_to "Let's Start with a Genre", genres_path %></strong></h1>
+<%= link_to 'Log Out', logout_path, method: :delete %>
+
 <br>
 <hr><% @users.each do |user| %></hr>
 <hr><strong><%= user.name %></strong>
 <br>
 <br>
+<% if (user == current_user) %>
 <%= link_to "Edit My Profile", edit_user_path(user)  %>
+<% end %>
 <br>
-<%= link_to "Show My Profile", user_path(user) %>
+<%= link_to "Show Profile", user_path(user) %>
 <br>
+<% if (user == current_user) %>
 <%= link_to "Delete My Profile", user_path(user), method: :delete, 
 											data: { confirm: "Are you sure?" } %>
+											<% end %>
 <% end %>
 <br>
 
-<%= link_to 'Log Out', logout_path, method: :delete %>
 
 
 
