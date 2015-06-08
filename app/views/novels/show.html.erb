@@ -12,6 +12,9 @@
 
 <h4>You are logged in as: <%= current_user.name.upcase if current_user%></h4>
 <br>
+<%= link_to "Delete this Novel!", novel_path, method: :delete_novel, data: { confirm: "Are you sure you want to delete this novel?"} %>
+<br>
 <%= link_to 'Back', genres_path %>
 <%= link_to 'Log Out', logout_path, method: :delete %>
+
 

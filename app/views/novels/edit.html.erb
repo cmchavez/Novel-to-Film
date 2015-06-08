@@ -1,6 +1,6 @@
-<h1>Add a new Novel!</h1>
+<h1>Edit this novel!</h1>
 
-<%= form_for @novel do |f| %>
+<%= form_for genres_path do |f| %>
 
     <div>
         <%= f.label :title %>
@@ -17,9 +17,8 @@
         <%= f.text_field :year_published %>
     </div>
 
-
-    
-    <%= f.submit "Add new Novel!" %>
+   
+    <%= f.submit "Submit these changes!" %>
 
 <% end %>
 

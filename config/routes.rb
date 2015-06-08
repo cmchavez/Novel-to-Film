@@ -19,16 +19,11 @@ Rails.application.routes.draw do
   
   
   post '/users' => 'users#create'
-  
   get '/users/new' => 'users#new', as: :new_user
- 
   get '/users/:id/edit' => 'users#edit', as: :edit_user
-
   get '/users/:id' => 'users#show', as: :user
-
   patch '/users/:id' => 'users#update'
-
-  delete 'users/:id' => 'users#destroy', as: :delete_user
+  delete '/users/:id' => 'users#destroy', as: :delete_user
 
   get '/login'     => 'sessions#new'
   post '/login'    => 'sessions#create' 
@@ -40,10 +35,13 @@ Rails.application.routes.draw do
   get '/genres/:id' => 'genres#show', as: :genre 
 
 
-  get '/genres/:genre_id/novels' => 'novels#index'
+  get '/genres/:genre_id/novels' => 'novels#index', as: :novels
+  get '/genres/:genre_id/novels/new' => 'novels#new', as: :new_novel
   get '/genres/:genre_id/novels/:id(.:format)' => 'novels#show', as: :novel
-  get '/novels/new' => 'novels#new', as: :new_novel
-  post '/novels' => 'novels#create'
+  post 'genres/:genre_id/novels' => 'novels#create'
+  get 'novels/:id/edit' => 'novels#edit', as: :edit_novel
+  patch 'novels/:id' => 'novels#update'
+  delete 'genres/:id/novels/:id' => 'novels#destroy', as: :delete_novel
 
 
   
