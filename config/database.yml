@@ -14,5 +14,5 @@ test:
 production:
   <<: *default
   database: novel-film_production
-  username: cmchavez
-  password: <%= ENV['12345'] %>
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
