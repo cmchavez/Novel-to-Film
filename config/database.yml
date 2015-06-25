@@ -5,7 +5,7 @@ default: &default
 
 development:
   <<: *default
-  database: novel_film_development
+  database: novel-film_development
 
 test:
   <<: *default
@@ -13,6 +13,6 @@ test:
 
 production:
   <<: *default
-  database: novel_film_production
+  database: novel-film_production
   username: rails
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
