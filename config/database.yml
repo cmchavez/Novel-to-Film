@@ -9,7 +9,7 @@ development:
 
 test:
   <<: *default
-  database: novel_film_test
+  database: novel-film_test
 
 production:
   <<: *default
